@@ -1,0 +1,14 @@
+{
+	"common": {
+		"interval": 60, // in seconds
+		"domain": "bbcnews.com",
+		"dataDirectory": "./data"
+	},
+	"pinger": {
+		"filePeriod": 86400	// in seconds
+	},
+	"web": {	
+		"longPingThreshold": 100, // in milliseconds
+		"portNumber": 3000
+	}
+}

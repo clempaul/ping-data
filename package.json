@@ -1,0 +1,18 @@
+{
+    "name": "PingData",
+    "version": "1.0.0",
+    "description": "Monitor internet connectivity using pings",
+    "main": "web/app.js",
+    "author": "Paul Clement <paul@clempaul.me.uk> (https://github.com/clempaul/)",
+    "license": "BSD-2-Clause",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/clempaul/pingdata.git"
+    },
+    "dependencies": {
+        "express": "~4.13.3",
+        "promise": "~7.0.4",
+        "forever": "~0.15.1",
+        "config": "~1.15.0"
+    }
+}
