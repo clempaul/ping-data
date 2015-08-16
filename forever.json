@@ -1,0 +1,17 @@
+[
+	{
+		"uid": "ping-data-pinger",
+		"append": true,
+		"watch": false,
+		"sourceDir": "./",
+		"script": "pinger/pinger.js",
+		"killSignal": "SIGTERM"
+	},
+	{
+		"uid": "ping-data-web",
+		"append": true,
+		"watch": true,
+		"sourceDir": "./",
+		"script": "web/app.js"
+	}
+]
