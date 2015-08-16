@@ -8,7 +8,7 @@ an excessive amount of time.
 Installation
 ------------
 
-First, you need to install [Node.js](nodejs), then follow these steps:
+First, you need to install [Node.js][nodejs], then follow these steps:
 
 ```
 $ git clone https://github.com/clempaul/ping-data.git
@@ -32,7 +32,7 @@ There are two components to run:
  - `pinger` sends pings as specified in your config file
  - `web` starts the web interface for viewing the results
 
-These should both be run under [`forever`](forever), which handles restarting
+These should both be run under [`forever`][forever], which handles restarting
 the processes if the stop (which `pinger` does when it needs to rotate the log
 file) whilst also running as a daemon.
 
