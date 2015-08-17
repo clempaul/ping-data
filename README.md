@@ -10,13 +10,11 @@ Installation
 
 First, you need to install [Node.js][nodejs], then follow these steps:
 
-```
-$ git clone https://github.com/clempaul/ping-data.git
-$ cd ping-data
-$ npm install
-$ npm -g install forever
-$ mkdir data
-```
+    $ git clone https://github.com/clempaul/ping-data.git
+    $ cd ping-data
+    $ npm install
+    $ npm -g install forever
+    $ mkdir data
 
 Configuration
 -------------
@@ -36,15 +34,11 @@ These should both be run under [`forever`][forever], which handles restarting
 the processes if the stop (which `pinger` does when it needs to rotate the log
 file) whilst also running as a daemon.
 
-```
-$ forever start forever.json
-```
+    $ forever start forever.json
 
 To verify that these are running, you can check the process list:
 
-```
-$ forever list
-```
+    $ forever list
 
 By default, the web interface runs on port 3000 (although this is configurable).
 To view your data, visit `http://localhost:3000/`.
