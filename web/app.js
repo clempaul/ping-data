@@ -84,11 +84,23 @@ function processFile(f) {
                 errors.unshift(row);
                 return true;
             }
+
+            function createUntimedErrorLine(line) {
+                if (line.indexOf("Network is unreachable") != -1) {
+                    var row = makeRow('danger', [line]);
+                    rows.unshift(row);
+                    errors.unshift(row);
+                    return true;
+                }
+
+                return false;
+            }
       
             pingData.split('\n').forEach(function (line) {
                 if (line.length !== 0 &&
                     !createNormalLine(line) &&
-                    !createErrorLine(line)) {
+                    !createErrorLine(line) &&
+                    !createUntimedErrorLine(line)) {
 
                     rows.unshift(makeRow('info', [line]));
                 }
