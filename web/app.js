@@ -51,15 +51,15 @@ function processFile(f) {
             var long = [];
       
             function createNormalLine(line) {
-                var values = line.match(/\[(\d+\.\d*)\]\s+\d+\s+bytes from.*icmp_req=(\d+)\s+ttl=(\d+)\s+time=(\d+\.?\d*) ms/);
+                var values = line.match(/\[(\d+\.\d*)\]\s+\d+\s+bytes from.*icmp_(req|seq)=(\d+)\s+ttl=(\d+)\s+time=(\d+\.?\d*) ms/);
                 if (!values) {
                     return false;
                 }
         
                 var timestamp = new Date(parseFloat(values[1], 10) * 1000).toUTCString();
-                var icmp_req = values[2];
-                var ttl = values[3];
-                var time = values[4];
+                var icmp_req = values[3];
+                var ttl = values[4];
+                var time = values[5];
         
                 var isLong = time > timeThreshold;
         
