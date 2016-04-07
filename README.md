@@ -31,7 +31,7 @@ There are two components to run:
  - `web` starts the web interface for viewing the results
 
 These should both be run under [`forever`][forever], which handles restarting
-the processes if the stop (which `pinger` does when it needs to rotate the log
+the processes if they stop (which `pinger` does when it needs to rotate the log
 file) whilst also running as a daemon.
 
     $ forever start forever.json
